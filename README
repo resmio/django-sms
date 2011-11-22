@@ -1,0 +1,35 @@
+===============
+django-sms
+===============
+
+A Django app for sending SMS with interchangable backends.
+
+Requirements
+============
+
+Required
+--------
+
+* Python 2.5+
+* Django 1.2+
+
+Backends
+========
+
+* 'sms.backends.locmem.SMSBackend'
+* 'sms.backends.console.SMSBackend'
+
+Writing your own backend
+========================
+
+
+
+Testing
+=======
+
+    sms.original_sms_backend = settings.SMS_BACKEND
+    settings.SMS_BACKEND = 'sms.backends.locmem.SMSBackend'
+    sms.outbox = []
+
+    sms.send_sms('my message', 'me', 'you')
+    self.assertIn('message', sms.outbox[0]['text'])

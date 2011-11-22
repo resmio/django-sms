@@ -20,6 +20,7 @@ setup(
         'sms.backends',
     ],
     requires=[
+        'django(>=1.2)'
     ],
     install_requires=[
     ],
