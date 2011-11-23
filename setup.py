@@ -9,12 +9,12 @@ except ImportError:
 
 setup(
     name='django-sms',
-    version='0.0.1-alpha',
+    version='0.0.1',
     description='An interface for django sms backends',
     author='Niels Sandholt Busch',
     author_email='niels.busch@gmail.com',
     url='https://bitbucket.org/resmio/django-sms/',
-    long_description=open('README', 'r').read(),
+#    long_description=open('README', 'r').read(),
     packages=find_packages(),
     install_requires=['django>=1.3',],
     classifiers=[
