@@ -14,7 +14,7 @@ setup(
     author='Niels Sandholt Busch',
     author_email='niels.busch@gmail.com',
     url='https://bitbucket.org/resmio/django-sms/',
-    long_description=open('README', 'r').read(),
+    long_description='',#open('README', 'r').read(),
     packages=[
         'sms',
         'sms.backends',
