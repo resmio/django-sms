@@ -16,6 +16,7 @@ Required
 Backends
 ========
 
+* 'sms.backends.dummy.SMSBackend'
 * 'sms.backends.locmem.SMSBackend'
 * 'sms.backends.console.SMSBackend'
 
