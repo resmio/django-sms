@@ -9,7 +9,7 @@ except ImportError:
 
 setup(
     name='django-sms',
-    version='0.0.2',
+    version='0.0.3',
     description='A Django app for sending SMS with interchangable backends.',
     author='Niels Sandholt Busch',
     author_email='niels.busch@gmail.com',
