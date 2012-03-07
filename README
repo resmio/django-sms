@@ -23,7 +23,7 @@ Backends
 Writing a custom backend
 ========================
 
-You can write your own SMS backend by subclassing BaseSMSBackend and overriding the send_sms method.
+You can write your own SMS backend by subclassing BaseSMSBackend and overriding the send_sms method. On any error, your backend should raise SMSError
 
 ::
 
@@ -36,7 +36,8 @@ You can write your own SMS backend by subclassing BaseSMSBackend and overriding 
             self.client = MyClient(settings.KEY, settings.SECRET)
 
         def send_sms(self, message, from_, to):
-            self.client.send_message(message, from_, to)
+            if not self.client.send_message(message, from_, to):
+                raise SMSError
 
 Usage
 =====
