@@ -2,6 +2,7 @@ from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
 from django.utils.importlib import import_module
 
+
 class SMSError(Exception):
     pass
 
@@ -24,9 +25,9 @@ def import_backend(backend, **kwargs):
     return klass(**kwargs)
 
 
-def send_sms(text, from_, to, backend=None):
+def send_sms(text, from_, to, backend=None, **kwargs):
     """
     Send an SMS using the specified backend
 
     """
-    import_backend(backend or settings.SMS_BACKEND).send_sms(text, from_, to)
+    import_backend(backend or settings.SMS_BACKEND).send_sms(text, from_, to, **kwargs)
