@@ -2,6 +2,7 @@ import sys
 
 from sms.backends.base import BaseSMSBackend
 
+
 class SMSBackend(BaseSMSBackend):
     """
     Write SMS to console
@@ -10,7 +11,7 @@ class SMSBackend(BaseSMSBackend):
     def __init__(self):
         self.stream = sys.stdout
 
-    def send_sms(self, text, from_, to):
+    def send_sms(self, text, from_, to, **kwargs):
         self.stream.write(to)
         self.stream.write(from_,)
         self.stream.write(text)

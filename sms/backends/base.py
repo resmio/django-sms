@@ -1,4 +1,4 @@
 class BaseSMSBackend(object):
 
-    def send_sms(text, from_, to):
+    def send_sms(self, text, from_, to, **kwargs):
         pass

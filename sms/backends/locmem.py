@@ -12,5 +12,5 @@ class SMSBackend(BaseSMSBackend):
         if not hasattr(sms, 'outbox'):
             sms.outbox = []
 
-    def send_sms(self, text, from_, to):
+    def send_sms(self, text, from_, to, **kwargs):
         sms.outbox.append({'text': text, 'from': from_, 'to': to})

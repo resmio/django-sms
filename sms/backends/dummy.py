@@ -6,5 +6,5 @@ class SMSBackend(BaseSMSBackend):
 
     """
 
-    def send_sms(self, text, from_, to):
+    def send_sms(self, text, from_, to, **kwargs):
         pass
