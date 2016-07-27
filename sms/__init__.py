@@ -30,4 +30,4 @@ def send_sms(text, from_, to, backend=None, **kwargs):
     Send an SMS using the specified backend
 
     """
-    import_backend(backend or settings.SMS_BACKEND).send_sms(text, from_, to, **kwargs)
+    return import_backend(backend or settings.SMS_BACKEND).send_sms(text, from_, to, **kwargs)
