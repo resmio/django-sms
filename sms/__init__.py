@@ -13,7 +13,7 @@ def import_backend(backend, **kwargs):
     try:
         mod_name, klass_name = path.rsplit('.', 1)
         mod = import_module(mod_name)
-    except ImportError, e:
+    except ImportError as e:
         raise ImproperlyConfigured(('Error importing SMS backend module %s: "%s"' % (mod_name, e)))
 
     try:
